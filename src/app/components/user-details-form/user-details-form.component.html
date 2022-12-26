@@ -1,0 +1,17 @@
+<form class="change-user-details">
+  <div class="row">
+    <label for="UserName">User Name</label>
+    <input type="text" name="UserName" [(ngModel)]="UserName" id="UserName" />
+  </div>
+  <div class="row">
+    <label for="UserEmail">User Email</label>
+    <input
+      type="text"
+      name="UserEmail"
+      id="UserEmail"
+      [(ngModel)]="UserEmail"
+    />
+  </div>
+
+  <input type="button" value="submit" (click)="commitEdit()" class="btn btn-success"/>
+</form>

@@ -1,0 +1,29 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="allUsers">
+    <div class="searchBar">
+        <input type="text" placeholder="search..." [(ngModel)]="searchTearm">
+        <button class="btn btn-primary" (click)="search()">search</button>
+    </div>
+    
+  <table>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">user name</th>
+          <th scope="col">user email</th>
+          <th scope="col">actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of allUsers">
+          <td>{{ user.userName }}</td>
+          <td>{{ user.userEmail }}</td>
+          <td><button (click)="deleteUser(user)">delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </table>
+</div>
+<div class="logOut">
+  <button (click)="adminLogout()" class="btn btn-danger">logout</button>
+</div>

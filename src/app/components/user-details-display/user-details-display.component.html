@@ -1,0 +1,17 @@
+<div class="userBox" serBackgroundColor>
+  <p>User details</p>
+  <div>
+    <img src="{{ url }}" alt="..." />
+    
+  </div>
+  <form enctype="multipart/form-data">
+    <input type="file" name="image" id="image" (change)="selectImg($event)" />
+    <button (click)="uploadImage()" class="btn btn-success">save</button>
+  </form>
+  <p>User Name :{{ UserName }}</p>
+  <p>User Email:{{ UserEmail }}</p>
+  <div (click)="editUser()" class="btn btn-primary">edit detalis</div>
+</div>
+<div *appIf="checker">
+  heooloalkfkjhak;lhgkljdsfjlkjadfslkjsdalkjalkadsfjlkjsdaf
+</div>
